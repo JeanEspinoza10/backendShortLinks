@@ -39,27 +39,30 @@ const createFree = async (req, res = response) => {
                     ]
                 })
             }
-            // Create random path
-            const timestamp = Date.now().toString(36).substring(0, 4);
-            const randomPart = Math.random().toString(36).substring(2, 6); 
-            const path = `${timestamp}-${randomPart}`
+            else {
+                // Create random path
 
-            const link = await db.Link.create({
-                url: url,
-                ip_address: clientIp,
-                path:`${serverUrl}/${path}`,
-                state: true
-            });
-            res.status(201).json({
-                "message": "Link created successfully",
-                "data": [
-                    {
-                        id : link.id,
-                        url: link.url,
-                        path: link.path
-                    }
-                ]
-            });
+                const timestamp = Date.now().toString(36).substring(0, 4);
+                const randomPart = Math.random().toString(36).substring(2, 6); 
+                const path = `${timestamp}-${randomPart}`
+
+                const link = await db.Link.create({
+                    url: url,
+                    ip_address: clientIp,
+                    path:`${serverUrl}/${path}`,
+                    state: true
+                });
+                res.status(201).json({
+                    "message": "Link created successfully",
+                    "data": [
+                        {
+                            id : link.id,
+                            url: link.url,
+                            path: link.path
+                        }
+                    ]
+                });
+            }
         }
     } catch (error) {
         res.status(400).json(
