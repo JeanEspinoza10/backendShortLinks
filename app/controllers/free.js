@@ -17,7 +17,8 @@ const createFree = async (req, res = response) => {
         const findLink = await db.Link.findOne({
             where: {
                 url: url,
-                ip_address: clientIp
+                ip_address: clientIp,
+                state: true
             }
         });
 
