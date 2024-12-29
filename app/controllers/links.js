@@ -11,7 +11,8 @@ const createLink = async (req, res = response) => {
         const findLink = await db.Link.findOne({
             where: {
                 url: url,
-                user_id: userApplicant
+                user_id: userApplicant,
+                state: true
             }
         });
         if (findLink) {
