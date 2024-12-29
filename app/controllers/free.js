@@ -1,7 +1,7 @@
 const {response} = require('express');
 const  db  = require('../models/index');
 
-const serverUrl = `${process.env.HOST}:${process.env.PORT}`;
+const serverUrl = `${process.env.HOST}`;
 
 const createFree = async (req, res = response) => {
     const clientIp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;

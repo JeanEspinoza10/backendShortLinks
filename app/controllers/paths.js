@@ -1,7 +1,7 @@
 const {response} = require('express');
 const  db  = require('../models/index');
 
-const serverUrl = `${process.env.HOST}:${process.env.PORT}`;
+const serverUrl = `${process.env.HOST}`;
 
 const getPath = async (req, res = response) => {
     const {pathUrl} = req.params;
