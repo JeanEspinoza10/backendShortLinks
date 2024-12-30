@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "5978201c-892c-403f-9a72-617592a75630",
+		"name": "ShortUrls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24688063",
+		"_collection_link": "https://martian-zodiac-114917.postman.co/workspace/Practicando~484a6d57-968e-42a6-897d-e54e8fe40505/collection/24688063-5978201c-892c-403f-9a72-617592a75630?action=share&source=collection_link&creator=24688063"
+	},
+	"item": [
+		{
+			"name": "Users Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sandra Janeth\",\r\n    \"last_name\": \"Lorenzo\",\r\n    \"email\": \"sipara@gmail.com\",\r\n    \"password\":  \"12345678910\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.14.149.64:4040/api/v1/users/register",
+					"protocol": "http",
+					"host": [
+						"3",
+						"14",
+						"149",
+						"64"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzM1NDQ1MTMzLCJleHAiOjE3MzU0NDg3MzN9.1bqUfgohmaj7RFUXQMRjgeHgnwjPzKE33pMLgcS5sDg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.14.149.64:4040/api/v1/users/information",
+					"protocol": "http",
+					"host": [
+						"3",
+						"14",
+						"149",
+						"64"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Statistics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1NDM0MjQxLCJleHAiOjE3MzU0Mzc4NDF9.-1L6Z8z1qO5cg2PKzZS5zvr4oR6QEfL-PU0POJe-mww",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/users/statistics",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ss@s.cosssm\",\r\n    \"password\":  \"dddd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.14.149.64:4040/api/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"3",
+						"14",
+						"149",
+						"64"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Roles Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzM1MzY1NTU5LCJleHAiOjE3MzUzNjkxNTl9.sj3JIwQyToTOifgPhM4mDHj_kE7XqqbdSi-qkah9BXs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"empleados\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/roles/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"roles",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Roles Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiaWF0IjoxNzM1MzY1NTU5LCJleHAiOjE3MzUzNjkxNTl9.sj3JIwQyToTOifgPhM4mDHj_kE7XqqbdSi-qkah9BXs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"state\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/roles/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"roles",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Links Create Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzY4NTU4LCJleHAiOjE3MzUzNzIxNTh9.wALihJWaGrxAQxGLaIHFhkHZ2km6uqQ0ftwxJvEzG1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\" : \"https://www.youtube.com/watch?v=yAbcYBin0Q8&t=1948s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/links/create",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"links",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Links Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1NDM0MjQxLCJleHAiOjE3MzU0Mzc4NDF9.-1L6Z8z1qO5cg2PKzZS5zvr4oR6QEfL-PU0POJe-mww",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/links/information",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"links",
+						"information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Links Update Users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzY4NTU4LCJleHAiOjE3MzUzNzIxNTh9.wALihJWaGrxAQxGLaIHFhkHZ2km6uqQ0ftwxJvEzG1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/links/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"links",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Free Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzY4NTU4LCJleHAiOjE3MzUzNzIxNTh9.wALihJWaGrxAQxGLaIHFhkHZ2km6uqQ0ftwxJvEzG1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\" : \"https://github.com/JeanEspinoza10/backendShortLinks/tree/main\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://3.14.149.64:4040/api/v1/free/create",
+					"protocol": "http",
+					"host": [
+						"3",
+						"14",
+						"149",
+						"64"
+					],
+					"port": "4040",
+					"path": [
+						"api",
+						"v1",
+						"free",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Free Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzY4NTU4LCJleHAiOjE3MzUzNzIxNTh9.wALihJWaGrxAQxGLaIHFhkHZ2km6uqQ0ftwxJvEzG1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://linksfast.site/api/v1/free/information",
+					"protocol": "http",
+					"host": [
+						"linksfast",
+						"site"
+					],
+					"path": [
+						"api",
+						"v1",
+						"free",
+						"information"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Free Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzY4NTU4LCJleHAiOjE3MzUzNzIxNTh9.wALihJWaGrxAQxGLaIHFhkHZ2km6uqQ0ftwxJvEzG1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 18,\r\n    \"state\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:4000/api/v1/free/update",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"free",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Free Statistics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM1MzY4NTU4LCJleHAiOjE3MzUzNzIxNTh9.wALihJWaGrxAQxGLaIHFhkHZ2km6uqQ0ftwxJvEzG1I",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 7,\r\n    \"state\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://linksfast.site/api/v1/free/statistics",
+					"protocol": "http",
+					"host": [
+						"linksfast",
+						"site"
+					],
+					"path": [
+						"api",
+						"v1",
+						"free",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
