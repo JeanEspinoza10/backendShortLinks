@@ -14,7 +14,7 @@ const swaggerSpec = {
         info : {
             title: 'ShortLinks',
             version: '1.0.0',
-            description: 'API REST para el servicio de Acortador de Links',
+            description: 'REST API for the URL Shortener service',
         },
     },
     apis : [
