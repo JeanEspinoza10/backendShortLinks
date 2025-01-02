@@ -45,7 +45,6 @@ const loginUser = async (req, res = response) => {
             }
         });
         const isValidPassword = bcrypt.compareSync(password, user.password );
-        console.log(isValidPassword);
         if (isValidPassword) {
             const token = await generateToken(user.id);
             res.status(200).json({

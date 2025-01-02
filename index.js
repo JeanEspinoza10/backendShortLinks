@@ -1,17 +1,39 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
-
+const swaggerUi = require('swagger-ui-express');
+const swaggerJSDoc = require('swagger-jsdoc');
+const path = require('path');
 dotenv.config();
 
-url_base = '/api/v1';
-path_app = './app/';
+const url_base = '/api/v1';
+const path_app = './app/';
+const swaggerSpec = {
+    definition: {
+        openapi: '3.0.0',
+        info : {
+            title: 'ShortLinks',
+            version: '1.0.0',
+            description: 'API REST para el servicio de Acortador de Links',
+        },
+    },
+    apis : [
+        `${path.join(__dirname, './app/routes/*.js')}`,
+    ]
+}
 
 const app = express();
 
-app.use(express.json());
 
+// Middlewares
+app.use(express.json());
 app.use(cors());
+
+app.use(
+    "/api-docs",
+    swaggerUi.serve,
+    swaggerUi.setup(swaggerJSDoc(swaggerSpec)
+));
 
 
 // Routes
@@ -26,6 +48,10 @@ app.use(
     '/',
     require( path_app + 'routes/paths')
 )
+
+app.get('/', (req, res) => {
+    res.redirect('/api-docs');
+});
 
 app.use(
     url_base + '/users',

@@ -12,7 +12,6 @@ const generateToken = (id) => {
             secret, 
             { expiresIn: '1h' }, 
             (err, token) => {
-            console.log(err);
             if (err) {
                 reject("Error in generating token");
             }
