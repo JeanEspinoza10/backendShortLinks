@@ -14,7 +14,7 @@ const swaggerSpec = {
         info : {
             title: 'ShortLinks',
             version: '1.0.0',
-            description: 'REST API for the URL Shortener service',
+            description: 'REST API for the URL Shortener service - Created by Jean Espinoza',
         },
     },
     apis : [

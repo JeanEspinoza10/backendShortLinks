@@ -1,6 +1,8 @@
 # Shortlinks
 Proyecto realizado enfocado para la creación de un servicio de Acortador de Links. 
 
+**URL de la API desplegada**: <a href="https://linksfast.site/" target="_blank">https://linksfast.site/</a>
+
 ## ¿Cómo funciona?
 **:one: Envío del enlace a acortar:**
     El usuario proporciona un enlace original que desea acortar y lo envía a la API REST mediante un endpoint específico.
