@@ -22,10 +22,10 @@ Simultáneamente, incrementa un contador de visitas para ese enlace acortado, re
 # Tecnologías
 
 <div>
-    <img src="./img/nodejs.png" alt="Python" height="40px" width="40px">
-    <img src="./img/js.png" alt="Python" height="40px" width="40px">
-    <img src="./img/aws.png" alt="Python" height="40px" width="40px">
-    <img src="./img/psql.png" alt="Python" height="40px" width="40px">
+    <img src="./img/nodejs.png" alt="nodejs" height="40px" width="40px">
+    <img src="./img/js.png" alt="javascript" height="40px" width="40px">
+    <img src="./img/aws.png" alt="aws" height="40px" width="40px">
+    <img src="./img/psql.png" alt="psql" height="40px" width="40px">
 </div>
 
 La API REST fue desarrollada utilizando JavaScript con el framework Node.js y Express.js. La gestión de la base de datos se implementó con PostgreSQL, asegurando un manejo eficiente de los datos. Para la autenticación y autorización de usuarios, se utilizó JWT (JSON Web Tokens), proporcionando un nivel adicional de seguridad. El despliegue de la aplicación se realizó en AWS EC2, garantizando escalabilidad y disponibilidad.
